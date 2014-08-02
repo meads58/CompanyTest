@@ -1,0 +1,22 @@
+Hey, we are the VC company and we are looking for companies we can cooperate with. Recently we've acquired list of 30 companies we are interested in, who were very busy doing business with each other. They were lending money back and forth and we would like to analyse the data about that.
+
+We are attaching 2 files. companies.txt, list of companies and loans.txt, list of 1000 loans they did with each other.
+
+Companies data have follow attributes:
+
+*	One company per line
+*	On every line there is company name and Companies House ID separated by space (watch out, there might be some spaces in companies names)
+
+Loans data have following attributes:
+
+*	One loan per line
+*	Attributes are lender ID, borrower ID, amount, loan date, due date and payment date. Lender and borrower IDs are equivalent to Companies House ID. Dates are in format YYYY-MM-DD (ex.: 2014-01-01). 
+*	If payment wasn't done yet, the value is 'nil'
+
+Based on a given data, we would like to answer to major questions:
+
+1. Which companies have good credit history (return money on time or no later then 31 days late)? If the payment is due in the future and payment wasn't yet made, we don't rule out the companies who still have chance to pay no later then 31 days.
+
+2. Which companies at the moment have more then 15M on account? Current balance is simply total amount of all not yet repaid incoming payments - total amount of all not yet paid lended money. Paid loans don't influence this obviously as at the end both companies have zero account difference.
+
+For given snippet of data we have found the results to give you values you can check your solution with. Its described in spec/integration_spec.rb. Your job is to get it from here and make sure your program works for any list of companies and loans in a given format. Btw, we want the code to be clean so ideally use TDD!
